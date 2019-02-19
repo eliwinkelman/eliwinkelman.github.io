@@ -27,5 +27,13 @@ This means that our accelerating elevator can be examined as a stationary elevat
 
 How does this effect our two forces on the apple?
 
-**Fg = mg** becomes **Fg = m(g+a)**
+It shouldn't, because if we look at our equation from before (**Fg = Fb**), substitute the equations for the forces, and simplify,
+
+**Fg = Fb**
+**mg = pgV**
+**m = pV**
+
+we see that the volume of the apple submerged isn't dependent on gravitational acceleration. So increasing the gravitational acceleration won't change the position of the ball and it stays in the same place.
+
+
 
