@@ -2,14 +2,13 @@
 layout: page
 title: About
 permalink: /about/
+published: true
 ---
 
-Some information about you!
+Hi, I'm Eli!
 
-### More Information
+I'm delving into mathematics at Oregon State University.
 
-A place to include any other types of information that you'd like to include about yourself.
+I'm very interested in mathematics, machine learning, physics and entrepreneurship. I also have some passing interest in philosophy (especially buddhism) and economics.
 
-### Contact me
-
-[email@domain.com](mailto:email@domain.com)
+[Email Me](mailto:winkelme@oregonstate.edu)
