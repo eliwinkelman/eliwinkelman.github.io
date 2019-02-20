@@ -12,25 +12,25 @@ We can imagine a sketch of the initial (static) situation like this:
 
 (Sketch initial system)
 
-There are only two forces on the apple, gravity and buoyancy. We know the apple is in equilibrium so $F_{g} = F_{b}$.
+There are only two forces on the apple, gravity and buoyancy. We know the apple is in equilibrium so $F_{ga} = F_{ba}$.
 
 Once the elevator starts moving, we don't get any new forces (on the ball), but the glass is accelerating upwards.
 
 I propose two solution methods: calling on the equivalence principle or working out the free body diagrams of the ball and the jar.
 
-The first method is much quicker so we'll explore that direction first. The equivalence principle states that a system with no internal forces accelerating upwards with acceleration $a$ is indistinguishable from a stationary system with a gravitational force $F_g=ma$ downwards.
+The first method is much quicker so we'll explore that direction first. The equivalence principle states that a system with no internal forces accelerating upwards with acceleration $a$ is indistinguishable from a stationary system with a gravitational force $F_ga=m_{apple}a$ downwards.
 
 This means that our accelerating elevator can be examined as a stationary elevator where our new gravitational acceleration $new gravitational acceleration = g + a$.
 
 How does this effect our two forces on the apple?
 
-It shouldn't, because if we look at our equation from before ($F_g = F_b$), substitute the equations for the forces, and simplify,
+It shouldn't, because if we look at our equation from before ($F_{ga} = F_{ba}$), substitute the equations for the forces, and simplify,
 
-$F_g = F_b**
+$F_{ga} = F_{ba}**
 
-$mg = \rhogV_{submerged}$
+$m_{a}g = \rho gV_{submerged}$
 
-$m = \rhoV_{submerged}$
+$m_{a} = \rho V_{submerged}$
 
 we see that the volume of the apple submerged isn't dependent on gravitational acceleration. So increasing the gravitational acceleration won't change the position of the ball and **it stays in the same place**.
 
@@ -40,9 +40,18 @@ Our free body diagram looks like this:
 
 (Sketch free body diagram)
 
-The only forces acting on the apple are still $F_{b}$ and $F_{g}$.
+The only forces acting on the apple are still $F_{ba}$ and $F_{ga}$.
 
-The forces acting on the jar are the force of gravity ($F_g$) and the normal force of the elevator floor pushing up against the jar (**Fn**) (with Fg=Fn) and a force to account for the next acceration of the jar with the elevator (**Fa = mass * acceleration of the elevator**). Note that this last force could be included in the normal force, but then we wouldn't be able to conveniently preserve the stationary result **Fg = Fn**. So the total force on the jar is **Ft = Fg - Fn + Fa = Fa = ma**. Which gives us the expected result that the jar is accelerating upwards at the same speed as the elevator. 
+The forces acting on the jar are the force of gravity 
+$$F_{gj}$$
+and the normal force of the elevator floor pushing up against the jar 
+$$F_{nj}$$
+with 
+$$F_{gj}=F_{nj}$$ 
+and a force to account for the next acceration of the jar with the elevator
+$$F_{aj} = m_j * a$$. 
+
+Note that this last force could be included in the normal force, but then we wouldn't be able to conveniently preserve the stationary result $F_g = F_n$. So the total force on the jar is **Ft = Fg - Fn + Fa = Fa = ma**. Which gives us the expected result that the jar is accelerating upwards at the same speed as the elevator. 
 
 But what about the apple? For the apple to accelerate upwards at the same rate as the elevator and jar, the total force on it must be **mass of apple * a**.
 
