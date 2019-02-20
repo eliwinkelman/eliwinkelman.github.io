@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Trouble with Buoyancy in an Elevator 1
-published: false
+published: true
 ---
 
 The following problem was a conceptual question in one of my physics classes. It has a simple correct solution, but it also has a clearly incorrect solution that follows from logically working through the free body diagram. Finding the mistake is revealing.
