@@ -26,11 +26,11 @@ How does this effect our two forces on the apple?
 
 It shouldn't, because if we look at our equation from before ($F_{ga} = F_{ba}$), substitute the equations for the forces, and simplify,
 
-$F_{ga} = F_{ba}**
+$$F_{ga} = F_{ba}$$
 
-$m_{a}g = \rho gV_{submerged}$
+$$m_{a}g = \rho gV_{submerged}$$
 
-$m_{a} = \rho V_{submerged}$
+$$m_{a} = \rho V_{submerged}$$
 
 we see that the volume of the apple submerged isn't dependent on gravitational acceleration. So increasing the gravitational acceleration won't change the position of the ball and **it stays in the same place**.
 
