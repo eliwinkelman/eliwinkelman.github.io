@@ -15,7 +15,7 @@ Once the elevator starts moving, we don't get any new forces (on the ball), but 
 
 I propose two solution methods: calling on the equivalence principle or working out the free body diagrams of the ball and the jar.
 
-The first method is much quicker so we'll explore that direction first. The equivalence principle states that a system with no internal forces accelerating upwards with acceleration $a$ is indistinguishable from a stationary system with a gravitational force $F_ga=m_{apple}a$ downwards.
+The first method is much quicker so we'll explore that direction first. The equivalence principle states that a system with no internal forces accelerating upwards with acceleration $a$ is indistinguishable from a stationary system with a gravitational force $F_{ga}=m_{apple}a$ downwards.
 
 This means that our accelerating elevator can be examined as a stationary elevator where our new gravitational acceleration $g_{new} = g + a$.
 
