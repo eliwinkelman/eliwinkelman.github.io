@@ -26,7 +26,7 @@ How does this effect our two forces on the apple?
 
 It shouldn't, because if we look at our equation from before ($F_{ga} = F_{ba}$), substitute the equations for the forces, and simplify,
 
-$F_{ga} = F_{ba}$
+$F_{ga} = F_{ba}**
 
 $m_{a}g = \rho gV_{submerged}$
 
@@ -42,25 +42,22 @@ Our free body diagram looks like this:
 
 The only forces acting on the apple are still $F_{ba}$ and $F_{ga}$.
 
-The forces acting on the jar are the force of gravity 
+The forces acting on the jar are the force of gravity $F_{gj}$ and the normal force of the elevator floor pushing up against the jar $F_{nj}$ with $F_{gj}=F_{nj}$ and a force to account for the next acceration of the jar with the elevator $F_{aj} = m_ja$. (Note that this last force could be included in the normal force, but then we wouldn't be able to conveniently preserve the stationary result $F_{gj} = F_{nj}$. So the total force on the jar is 
 
-[\F_{gj}\]
+$$F_{totalj} = F_{gj} - F_{nj} + F_{aj} = F_{aj} = m_ja$$. 
 
-and the normal force of the elevator floor pushing up against the jar 
+Which gives us the expected result that the jar is accelerating upwards at the same speed as the elevator.
 
-$$F_{nj}$$
+But what about the apple? For the apple to accelerate upwards at the same rate as the elevator and jar, the total force on it must be $F_{aa} = m_{apple}a$.
 
-with 
+If we calculate for our total force we get 
 
-$$F_{gj}=F_{nj}$$ 
+$$F_{totala} = F_{ba} - F_{ga} = F_{aa}$$. 
 
-and a force to account for the next acceration of the jar with the elevator
-$$F_{aj} = m_j * a$$. 
+If the apple reaches equilibrium, 
 
-Note that this last force could be included in the normal force, but then we wouldn't be able to conveniently preserve the stationary result $F_g = F_n$. So the total force on the jar is **Ft = Fg - Fn + Fa = Fa = ma**. Which gives us the expected result that the jar is accelerating upwards at the same speed as the elevator. 
+$$F_{ba} = F_{aa} + F_{ga} = \rho gV_{nowsubmerged}$$. 
 
-But what about the apple? For the apple to accelerate upwards at the same rate as the elevator and jar, the total force on it must be **mass of apple * a**.
-
-If we calculate for our total force we get **Ft = Fb - Fg = Fa**. If the apple reaches equilibrium, **Fb = Fa + Fg = pgV**. Since **p** and **g** are constants, the volume of the apple that is submerged must increase, and **the apple sinks**.
+Since $\rho$ and $g$ are constants the volume of the apple that is submerged must increase, and so **the apple sinks**.
 
 Which one is incorrect? And where is the mistake?
