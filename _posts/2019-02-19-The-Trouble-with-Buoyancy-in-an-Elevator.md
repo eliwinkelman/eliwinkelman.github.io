@@ -40,7 +40,7 @@ Our free body diagram looks like this:
 
 (Sketch free body diagram)
 
-The only forces acting on the apple are still $F_{b apple}$ and $F_{g apple}$.
+The only forces acting on the apple are still $F_{b}$ and $F_{g}$.
 
 The forces acting on the jar are the force of gravity ($F_g$) and the normal force of the elevator floor pushing up against the jar (**Fn**) (with Fg=Fn) and a force to account for the next acceration of the jar with the elevator (**Fa = mass * acceleration of the elevator**). Note that this last force could be included in the normal force, but then we wouldn't be able to conveniently preserve the stationary result **Fg = Fn**. So the total force on the jar is **Ft = Fg - Fn + Fa = Fa = ma**. Which gives us the expected result that the jar is accelerating upwards at the same speed as the elevator. 
 
