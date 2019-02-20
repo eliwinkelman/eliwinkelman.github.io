@@ -20,7 +20,7 @@ I propose two solution methods: calling on the equivalence principle or working 
 
 The first method is much quicker so we'll explore that direction first. The equivalence principle states that a system with no internal forces accelerating upwards with acceleration $a$ is indistinguishable from a stationary system with a gravitational force $F_ga=m_{apple}a$ downwards.
 
-This means that our accelerating elevator can be examined as a stationary elevator where our new gravitational acceleration $new gravitational acceleration = g + a$.
+This means that our accelerating elevator can be examined as a stationary elevator where our new gravitational acceleration $g_{new} = g + a$.
 
 How does this effect our two forces on the apple?
 
