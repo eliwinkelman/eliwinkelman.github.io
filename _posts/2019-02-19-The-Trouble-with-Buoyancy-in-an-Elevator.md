@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Trouble with Buoyancy in an Elevator 1
-published: true
+published: false
 ---
 
 The following problem was a conceptual question in one of my physics classes. It has a simple correct solution, but it also has a clearly incorrect solution that follows from logically working through the free body diagram. Finding the mistake is revealing.
@@ -12,7 +12,7 @@ We can imagine a sketch of the initial (static) situation like this:
 
 (Sketch initial system)
 
-There are only two forces on the apple, gravity and buoyancy. We know the apple is in equilibrium so **Fg = Fb**.
+There are only two forces on the apple, gravity and buoyancy. We know the apple is in equilibrium so **F<sub>g</sub> = F<sub>b</sub>**.
 
 Once the elevator starts moving, we don't get any new forces (on the ball), but the glass is accelerating upwards.
 
