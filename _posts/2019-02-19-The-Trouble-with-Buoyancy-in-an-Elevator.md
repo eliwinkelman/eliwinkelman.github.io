@@ -12,7 +12,7 @@ We can imagine a sketch of the initial (static) situation like this:
 
 (Sketch initial system)
 
-There are only two forces on the apple, gravity and buoyancy. We know the apple is in equilibrium so $F_g</sub> = F_b$.
+There are only two forces on the apple, gravity and buoyancy. We know the apple is in equilibrium so $F_g = F_b$.
 
 Once the elevator starts moving, we don't get any new forces (on the ball), but the glass is accelerating upwards.
 
