@@ -29,7 +29,7 @@ $$m_{a}g = \rho gV_{submerged}$$
 
 $$m_{a} = \rho V_{submerged}$$
 
-we see that the volume of the apple submerged isn't dependent on gravitational acceleration. So increasing the gravitational acceleration won't change the position of the ball and **it stays in the same place**.
+we see that the volume of the apple submerged isn't dependent on gravitational acceleration. So increasing the gravitational acceleration won't change the position of the apple and **it stays in the same place**.
 
 What about the other method?
 
