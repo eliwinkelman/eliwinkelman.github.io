@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Trouble with Buoyancy in an Elevator 1
-published: false
+published: true
 ---
 
 The following problem was a conceptual question in one of my physics classes. It has a simple correct solution, but it also has a clearly incorrect solution that follows from logically working through the free body diagram. Finding the mistake is revealing.
@@ -26,8 +26,10 @@ How does this effect our two forces on the apple?
 
 It shouldn't, because if we look at our equation from before (**Fg = Fb**), substitute the equations for the forces, and simplify,
 
-**Fg = Fb**
+**F<sub>g</sub> = Fb**
+
 **mg = pgV**
+
 **m = pV**
 
 we see that the volume of the apple submerged isn't dependent on gravitational acceleration. So increasing the gravitational acceleration won't change the position of the ball and **it stays in the same place**.
