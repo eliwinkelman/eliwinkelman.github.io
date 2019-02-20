@@ -25,7 +25,7 @@ It shouldn't, because if we look at our equation from before ($F_{ga} = F_{ba}$)
 
 $$F_{ga} = F_{ba}$$
 
-$$m_{a}g = \rho gV_{submerged}$$
+$$m_{ag} = \rho gV_{submerged}$$
 
 $$m_{a} = \rho V_{submerged}$$
 
