@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The Trouble with Buoyancy in an Elevator
+title: Trouble with Buoyancy in an Elevator
 published: false
 ---
 
@@ -45,3 +45,5 @@ The forces acting on the jar are the force of gravity (**Fg**) and the normal fo
 But what about the apple? For the apple to accelerate upwards at the same rate as the elevator and jar, the total force on it must be **mass of apple * a**.
 
 If we calculate for our total force we get **Ft = Fb - Fg = Fa**. If the apple reaches equilibrium, **Fb = Fa + Fg = pgV**. Since **p** and **g** are constants, the volume of the apple that is submerged must increase, and **the apple sinks**.
+
+Which one is incorrect? And where is the mistake?
