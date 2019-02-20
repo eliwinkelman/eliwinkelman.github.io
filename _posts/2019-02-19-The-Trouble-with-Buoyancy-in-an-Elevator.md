@@ -26,7 +26,7 @@ How does this effect our two forces on the apple?
 
 It shouldn't, because if we look at our equation from before ($F_{ga} = F_{ba}$), substitute the equations for the forces, and simplify,
 
-$F_{ga} = F_{ba}**
+$F_{ga} = F_{ba}$
 
 $m_{a}g = \rho gV_{submerged}$
 
@@ -43,11 +43,17 @@ Our free body diagram looks like this:
 The only forces acting on the apple are still $F_{ba}$ and $F_{ga}$.
 
 The forces acting on the jar are the force of gravity 
-$$F_{gj}$$
+
+[\F_{gj}\]
+
 and the normal force of the elevator floor pushing up against the jar 
+
 $$F_{nj}$$
+
 with 
+
 $$F_{gj}=F_{nj}$$ 
+
 and a force to account for the next acceration of the jar with the elevator
 $$F_{aj} = m_j * a$$. 
 
