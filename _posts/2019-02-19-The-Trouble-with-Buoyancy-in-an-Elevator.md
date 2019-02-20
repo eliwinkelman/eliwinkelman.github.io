@@ -42,4 +42,6 @@ The only forces acting on the apple are still **Fb** and **Fg**.
 
 The forces acting on the jar are the force of gravity (**Fg**) and the normal force of the elevator floor pushing up against the jar (**Fn**) (with Fg=Fn) and a force to account for the next acceration of the jar with the elevator (**Fa = mass * acceleration of the elevator**). Note that this last force could be included in the normal force, but then we wouldn't be able to conveniently preserve the stationary result **Fg = Fn**. So the total force on the jar is **Ft = Fg - Fn + Fa = Fa = ma**. Which gives us the expected result that the jar is accelerating upwards at the same speed as the elevator. 
 
-But what about the apple? For the apple to accelerate upwards at the same rate as the elevator and jar, the total force on it must be **mass of apple * a**. 
+But what about the apple? For the apple to accelerate upwards at the same rate as the elevator and jar, the total force on it must be **mass of apple * a**.
+
+If we calculate for our total force we get **Ft = Fb - Fg = Fa**. If the apple reaches equilibrium, **Fb = Fa + Fg = pgV**. Since **p** and **g** are constants, the volume of the apple that is submerged must increase, and **the apple sinks**.
