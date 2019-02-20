@@ -8,9 +8,6 @@ The following problem was a conceptual question in one of my physics classes. It
 
 A jar of water sits in an elevator with an apple floating (statically) on its surface. When the elevator accelerates upwards, does the apple sink, rise, or stay at the same height relative to the water?
 
-We can imagine a sketch of the initial (static) situation like this:
-
-(Sketch initial system)
 
 There are only two forces on the apple, gravity and buoyancy. We know the apple is in equilibrium so $F_{ga} = F_{ba}$.
 
@@ -36,17 +33,11 @@ we see that the volume of the apple submerged isn't dependent on gravitational a
 
 What about the other method?
 
-Our free body diagram looks like this:
-
-(Sketch free body diagram)
-
 The only forces acting on the apple are still $F_{ba}$ and $F_{ga}$.
 
 The forces acting on the jar are the force of gravity $F_{gj}$ and the normal force of the elevator floor pushing up against the jar $F_{nj}$ with $F_{gj}=F_{nj}$ and a force to account for the next acceration of the jar with the elevator $F_{aj} = m_ja$. (Note that this last force could be included in the normal force, but then we wouldn't be able to conveniently preserve the stationary result $F_{gj} = F_{nj}$. So the total force on the jar is 
 
-
-$$F_{totalj} = F_{gj} - F_{nj} + F_{aj} = F_{aj} = m_ja$$. 
-
+$$F_{totalj} = F_{gj} - F_{nj} + F_{aj} = F_{aj} = m_ja.$$
 
 Which gives us the expected result that the jar is accelerating upwards at the same speed as the elevator.
 
@@ -54,15 +45,11 @@ But what about the apple? For the apple to accelerate upwards at the same rate a
 
 If we calculate for our total force we get 
 
-
-$$F_{totala} = F_{ba} - F_{ga} = F_{aa}$$. 
-
+$$F_{totala} = F_{ba} - F_{ga} = F_{aa}.$$
 
 If the apple reaches equilibrium, 
 
-
-$$F_{ba} = F_{aa} + F_{ga} = \rho gV_{nowsubmerged}$$. 
-
+$$F_{ba} = F_{aa} + F_{ga} = \rho gV_{nowsubmerged}.$$ 
 
 Since $\rho$ and $g$ are constants the volume of the apple that is submerged must increase, and so **the apple sinks**.
 
