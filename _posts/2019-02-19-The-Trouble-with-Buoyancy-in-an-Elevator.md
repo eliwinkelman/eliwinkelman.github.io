@@ -7,7 +7,7 @@ title: The Trouble with Buoyancy in an Elevator
 published: false
 ---
 
-The following problem was a conceptual question in one of my physics classes. It has a simple correct solution, but it also a has a simple incorrect solution. Finding the mistake is revealing.
+The following problem was a conceptual question in one of my physics classes. It has a simple correct solution, but it also has a clearly incorrect solution that follows from logically working through the free body diagram. Finding the mistake is revealing.
 
 A jar of water sits in an elevator with an apple floating (statically) on its surface. When the elevator accelerates upwards, does the apple sink, rise, or stay at the same height relative to the water?
 
@@ -33,7 +33,16 @@ It shouldn't, because if we look at our equation from before (**Fg = Fb**), subs
 **mg = pgV**
 **m = pV**
 
-we see that the volume of the apple submerged isn't dependent on gravitational acceleration. So increasing the gravitational acceleration won't change the position of the ball and it stays in the same place.
+we see that the volume of the apple submerged isn't dependent on gravitational acceleration. So increasing the gravitational acceleration won't change the position of the ball and **it stays in the same place**.
 
+What about the other method?
 
+Our free body diagram looks like this:
 
+(Sketch free body diagram)
+
+The only forces acting on the apple are still **Fb** and **Fg**.
+
+The forces acting on the jar are the force of gravity (**Fg**) and the normal force of the elevator floor pushing up against the jar (**Fn**) (with Fg=Fn) and a force to account for the next acceration of the jar with the elevator (**Fa = mass * acceleration of the elevator**). Note that this last force could be included in the normal force, but then we wouldn't be able to conveniently preserve the stationary result **Fg = Fn**. So the total force on the jar is **Ft = Fg - Fn + Fa = Fa = ma**. Which gives us the expected result that the jar is accelerating upwards at the same speed as the elevator. 
+
+But what about the apple? For the apple to accelerate upwards at the same rate as the elevator and jar, the total force on it must be **mass of apple * a**. 
