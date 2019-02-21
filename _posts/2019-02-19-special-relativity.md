@@ -1,7 +1,7 @@
 ---
 format: post
 title: Special Relativity
-published: true
+published: false
 ---
 A few years ago I found that there were few sources of good introductory writing on special relativity that are both understandable to novices but still targeted above the casual lay person. In other words, both heavily motivated by conceptuals and rigorous.
 
