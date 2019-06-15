@@ -1,6 +1,4 @@
 ---
 published: true
 ---
-## The Path Connectedness of \(S^n\)
-
-
+## The Path Connectedness of {% raw %} \(S^n\) {% endraw %}
