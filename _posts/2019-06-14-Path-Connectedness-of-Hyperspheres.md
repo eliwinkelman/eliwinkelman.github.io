@@ -11,7 +11,11 @@ Definition: A topological space $X$ is path connected if for any two points $p, 
 
 The stereographic projection is a projection of the n-sphere onto $\mathbb R^{n-1}$.
 
-![Stereographic Projection Illustration](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Stereoprojzero.svg/1280px-Stereoprojzero.svg.png "Stereographic projection of the unit sphere from the north pole onto the plane z = 0, Joshua Davis") Joshua Davis [Distributed under CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/)
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Stereoprojzero.svg/1280px-Stereoprojzero.svg.png" width="200" height="200" />
+Joshua Davis [Distributed under CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/)
+
+
 
 Pick a north pole $N$ of $S^n \subset \mathbb{R}^{n+1}$. Then the projection of the point $Q \in S^n-{N}$ onto the hyperplane $H \subset \mathbb R^{n+1}$ is the intersection of $\overline{NQ}$ with $H$.
 
