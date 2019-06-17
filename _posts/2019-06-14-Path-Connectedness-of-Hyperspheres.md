@@ -21,7 +21,9 @@ Joshua Davis [Distributed under CC BY-SA 3.0](http://creativecommons.org/license
 Pick a north pole $N$ of $S^n \subset \mathbb{R}^{n+1}$. Then the projection of the point $Q \in S^n-{N}$ onto the hyperplane $H \subset \mathbb R^{n+1}$ is the intersection of $\overline{NQ}$ with $H$.
 
 In Cartesian Coordinates this is given by
-\[P_i = \frac{p_i}{1-p_0}\]
+
+$$P_i = \frac{p_i}{1-p_0}$$
+
 where here $N=(1, 0, 0 ... 0)$, $(p_0, p_1, ... p_n)$ are the coordinates of the point on the n-sphere and $(P_0, P_1, ... P_n)$ are the points on the projected hyperplane.
 
 This function is continuous, and it has a continuous inverse
