@@ -3,15 +3,15 @@ published: false
 ---
 ### Outline
 
-We can show that $S^n$ is path connected through the following steps.
+We can show that $S^n$ is path connected once we have the right groundwork:
 
-Groundwork:
-1. Prove that $S^n - {N}$ is homeomorphic to $\mathbb{R}^{n-1}$ through the stereographic project.
-2. Prove that $S^n - {N}$ is homeomorphic to $S^n - {P}$ for any points $N, P \in S^n$.
-3. Prove that $\mathbb{R}^n$ is path connected.
+1. Show that $S^n - {N}$ is homeomorphic to $\mathbb{R}^{n-1}$ through the stereographic project.
+2. Show that $S^n - {N}$ is homeomorphic to $S^n - {P}$ for any points $N, P \in S^n$.
+3. Show that $\mathbb{R}^n$ is path connected.
 
-Proof:
+Then the proof follows by supposing that two distinct points in $S^n$ are not path connected. We can pick another distinct point, $N$, and remove it from the space, creating a space $S^n - {N}$ which is homeomorphic to $\mathbb{R}^n$ and therefore must be path connected. So there must exist a path between our two distinct points.
 
+Details...
 
 ### Path Connectedness
 
@@ -41,6 +41,13 @@ where here $N=(1, 0, 0 ... 0)$, $(p_0, p_1, ... p_n)$ are the coordinates of the
 This function is continuous, and it has a continuous inverse.
 
 Therefore, this definies a homeomorphism between $S^n - {N}$ and $\mathbb R^{n-1}$
+
+### Homeomorphism of $S^n - {N}$ and $S^n - {P}$
+
+Theorem: Let $N, P \in S^n$ be distinct points. Then $S^n - {N}$ and $S^n - {P}$ are homeomorphic.
+
+Proof: 
+
 
 ### Path Connectedness of $\mathbb{R^n}$
 
