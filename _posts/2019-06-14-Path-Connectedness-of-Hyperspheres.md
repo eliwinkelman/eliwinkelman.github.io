@@ -1,6 +1,18 @@
 ---
 published: false
 ---
+### Outline
+
+We can show that $S^n$ is path connected through the following steps.
+
+Groundwork:
+1. Prove that $S^n - {N}$ is homeomorphic to $\mathbb{R}^{n-1}$ through the stereographic project.
+2. Prove that $S^n - {N}$ is homeomorphic to $S^n - {P}$ for any points $N, P \in S^n$.
+3. Prove that $\mathbb{R}^n$ is path connected.
+
+Proof:
+
+
 ### Path Connectedness
 
 Definition: A path in a topological space $X$ between points $p, q \in X$ is a continuous function $\gamma : [0, 1] \rightarrow X$ such that $\gamma(0) = p$ and $\gamma(1) = q$.
@@ -18,7 +30,7 @@ Joshua Davis [Distributed under CC BY-SA 3.0](http://creativecommons.org/license
 
 
 
-Pick a north pole $N$ of $S^n \subset \mathbb{R}^{n+1}$. Then the projection of the point $Q \in S^n-{N}$ onto the hyperplane $H \subset \mathbb R^{n+1}$ is the intersection of $\overline{NQ}$ with $H$.
+Pick a north pole $N$ of $S^n \subset \mathbb{R}^{n}$. Then the projection of the point $Q \in S^n-{N}$ onto the hyperplane $H \subset \mathbb R^{n}$ is the intersection of $\overline{NQ}$ with $H$.
 
 In Cartesian Coordinates this is given by
 
@@ -28,7 +40,7 @@ where here $N=(1, 0, 0 ... 0)$, $(p_0, p_1, ... p_n)$ are the coordinates of the
 
 This function is continuous, and it has a continuous inverse.
 
-Therefore, this definies a homeomorphism between $S^n - {N}$ and $\mathbb R^n$
+Therefore, this definies a homeomorphism between $S^n - {N}$ and $\mathbb R^{n-1}$
 
 ### Path Connectedness of $\mathbb{R^n}$
 
