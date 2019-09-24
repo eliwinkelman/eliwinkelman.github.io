@@ -15,25 +15,36 @@ The basic idea is that for each class that needs dynamic casting, we will assign
 
 For example, say we had a Dog class and a subclass of Dog called Lab. Our Dog class would get the first prime number assigned to it as an id (multiplied by 1 because Dog has no parents). Lab would have an id of 3\*2 = 6 (the next prime is 3).
 
-``` class Dog {
+``` 
+class Dog {
 		static int id = 2
 	}
     
     class Lab {
  		static int id = 2 * nextPrime() // nextPrime() -> 3
 	}
+    
 ```
+
 
 If we need to check if an instance of Dog is actually an upcasted instance of Lab, we can just check if the id of the dog instance is divisible by the id of the Lab class.
 
-``` if (dog.id % Lab.id == 0) {
-       // yay!
-	}
+``` 
+if (dog.id % Lab.id == 0) {
+       
+}
 ```
 
 We could also check upcasts the same way. Because each class has a unique prime multiplied into it's id tree the id of the object instance O is **only** divisible by the id of a class C if O is an instance of C or inherits from C.
 
 ### Implementation
     
-    
-This isn't useful unless we can implement it in a way that is reusable.
+This isn't useful unless we can find a way to automatically assign id's to the classes that need them.
+
+We need a function to get the next prime number that has never been used: getNextPrime().
+
+Then we need a function that calculates the type_id from the parent id and the prime.
+
+getChildTypeId(int parentId)
+
+Finally, we need a DynamicClass parent class that will define the implementation of a <code>static const int id</code> for the class.
