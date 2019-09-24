@@ -26,7 +26,7 @@ $$P_i = \frac{p_i}{1-p_0}$$
 
 where here $N=(1, 0, 0 ... 0)$, $(p_0, p_1, ... p_n)$ are the coordinates of the point on the n-sphere and $(P_0, P_1, ... P_n)$ are the points on the projected hyperplane.
 
-This function is continuous, and it has a continuous inverse
+This function is continuous, and it has a continuous inverse.
 
 Therefore, this definies a homeomorphism between $S^n - {N}$ and $\mathbb R^n$
 
@@ -36,9 +36,13 @@ Theorem: If $X, Y$ are path connected, then so is $X \times Y$.
 
 Proof: Let $p, q \in X \times Y$ be points. Then $p = (x_1, y_1)$ and $q = (x_2, y_2)$. Since $X$ is path connected, there is a path $\gamma_1$ from $x_1$ to $x_2$. Similarly, there is a path $\gamma_2$ between $y_1$ and $y_2$. Therefore $\gamma = (\gamma_1, \gamma_2)$ is a path in $X \times Y$ between $p$ and $q$. $\square$
 
+Theorem: $\mathbb{R}$ is path connected.
+
+Proof: Let $p, q \in \mathbb{R}$ be distinct points. Then $p = (x_1, y_1)$ and $q = (x_2, y_2). Observe that the function \[\gamma(t) = (
+\frac{1}{x_2-x_1}(t+x_1), \frac{1}{y_2-y_1}(t+y_1))\] is a path between $p$ and $q$. $\square$
+
 ### Path Connectedness of $S^n$
 
 Theorem: $S^n$ is path connected for $n \geq 1$.
 
 Proof: Let $p, q \in S^n$ be distinct points and suppose they are not path connected.
-
