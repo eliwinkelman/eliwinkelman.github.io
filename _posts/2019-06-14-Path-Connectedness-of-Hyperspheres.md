@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 
 We can show that $S^n$ is path connected once we have the right groundwork:
