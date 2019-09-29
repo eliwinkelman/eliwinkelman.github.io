@@ -47,4 +47,14 @@ Then we need a function that calculates the type_id from the parent id and the p
 
 getChildTypeId(int parentId)
 
-Finally, we need a DynamicClass parent class that will define the implementation of a <code>static const int id</code> for the class.
+Finally, we need a DynamicClass parent class that will define the implementation of a `static const int id` for the class.
+
+``` c++
+	class DynamicClass {
+      static const int id = 1;
+    }
+```
+
+And then for convenience, a macro that does the neccessary work to generate a dynamic child class.
+
+
