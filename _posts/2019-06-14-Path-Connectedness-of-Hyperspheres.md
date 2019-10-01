@@ -4,12 +4,10 @@ published: true
 
 We can show that $S^n$ is path connected once we have the right groundwork:
 
-1. Show that $S^n - {N}$ is homeomorphic to $\mathbb{R}^{n-1}$ through the stereographic project.
+1. Show that $S^n - \{N\}$ is homeomorphic to $\mathbb{R}^{n-1}$ through the stereographic project.
 2. Show that $\mathbb{R}^n$ is path connected.
 
-Then the proof follows by supposing that two distinct points in $S^n$ are not path connected. We can pick another distinct point, $N$, and remove it from the space, creating a space $S^n - {N}$ which is homeomorphic to $\mathbb{R}^n$ and therefore must be path connected. So there must exist a path between our two distinct points.
-
-Details...
+Then the proof follows by supposing that two distinct points in $S^n$ are not path connected. We can pick another distinct point, $N$, and remove it from the space, creating a space $S^n - \{N\}$ which is homeomorphic to $\mathbb{R}^n$ and therefore must be path connected. So there must exist a path between our two distinct points.
 
 ### Path Connectedness
 
@@ -38,7 +36,7 @@ where here $N=(1, 0, 0 ... 0)$, $(p_0, p_1, ... p_n)$ are the coordinates of the
 
 This function is continuous, and it has a continuous inverse.
 
-Therefore, this definies a homeomorphism between $S^n - {N}$ and $\mathbb R^{n-1}$ Note that the choice of the point $N$ is arbitrary.
+Therefore, this definies a homeomorphism between $S^n - \{N\}$ and $\mathbb R^{n-1}$ Note that the choice of the point $N$ is arbitrary.
 
 ### Path Connectedness of $\mathbb{R^n}$
 
@@ -55,4 +53,4 @@ Proof: Let $p, q \in \mathbb{R}$ be distinct points. Then $p = (x_1, y_1)$ and $
 
 Theorem: $S^n$ is path connected for $n \geq 1$.
 
-Proof: Let $p, q \in S^n$ be distinct points and suppose they are not path connected. Then let $N$ be a third distinct point in $S^n$. $S^n - {N}$ is homeomorphic to $R^{n-1}$ and therefore path connected, so there must be a path from $p$ to $q$. Thus $S^n$ is path connected.
+Proof: Let $p, q \in S^n$ be distinct points and suppose they are not path connected. Then let $N$ be a third distinct point in $S^n$. $S^n - \{N\}$ is homeomorphic to $R^{n-1}$ and therefore path connected, so there must be a path from $p$ to $q$. Thus $S^n$ is path connected.
