@@ -17,12 +17,12 @@ For example, say we had a Dog class and a subclass of Dog called Lab. Our Dog cl
 
 ``` c++
 class Dog {
-		static int id = 2
-	}
+	static int id = 2
+}
     
-    class Lab {
- 		static int id = 2 * nextPrime() // nextPrime() -> 3
-	}
+class Lab {
+ 	static int id = 2 * nextPrime() // nextPrime() -> 3
+}
     
 ```
 
@@ -31,7 +31,7 @@ If we need to check if an instance of Dog is actually an upcasted instance of La
 
 ``` c++
 if (dog.id % Lab::id == 0) {
-       return true;
+	return true;
 }
 return false;
 ```
@@ -115,11 +115,13 @@ public:
 END_DYNAMIC_CLASS(myChildDynamicClass, myDynamicClass)
 
 int main() {
+  
 	myDynamicClass* hiddenChild = new myChildDynamicClass()
       
     myDynamicClass* parent = new myDynamicClass()
       
     myDynamicChildClass* child = Dynamic_Cast<myDynamicChildClass>(hiddenChild);
+  
   	myDynamicChildClass* badCast = Dynamic_Cast<myDynamicChildClass>(parent);
   
   	if (badCast != nullptr) {
