@@ -46,8 +46,10 @@ Proof: Let $p, q \in X \times Y$ be points. Then $p = (x_1, y_1)$ and $q = (x_2,
 
 Theorem: $\mathbb{R}$ is path connected.
 
-Proof: Let $p, q \in \mathbb{R}$ be distinct points. Then $p = (x_1, y_1)$ and $q = (x_2, y_2). Observe that the function \[\gamma(t) = (
-\frac{1}{x_2-x_1}(t+x_1), \frac{1}{y_2-y_1}(t+y_1))\] is a path between $p$ and $q$. $\square$
+Proof: Let $p, q \in \mathbb{R}$ be distinct points. Then $p = (x_1, y_1)$ and $q = (x_2, y_2)$. Observe that the function 
+\[\gamma(t) = (
+\frac{1}{x_2-x_1}(t+x_1), \frac{1}{y_2-y_1}(t+y_1)) \] 
+is a path between $p$ and $q$. $\square$
 
 ### Path Connectedness of $S^n$
 
