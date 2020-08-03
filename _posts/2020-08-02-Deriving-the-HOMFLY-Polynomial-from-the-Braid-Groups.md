@@ -45,7 +45,13 @@ The set of infinitely differentiable functions from $\mathbb{R}^3 $ to $\mathbb{
 
 Just like a vector space has a basis, modules can also have a basis (although they may not). Let $M$ be an $R$-module. A set $E \subset M$ is a basis for $M$ if $E$ is a generating set for $M$ and $E$ is linearly independent. A free module is a module with a basis.
 
-The concept of a bilinear map is important for defining the tensor product of $R$-modules. A bilinear map extends the notion of a linear map to maps of two variables by making the map linear on each variable. Let $X, Y, Z$ be $R$-Modules and $f : X \times Y \to Z$ be a mapping. $f$ is bilinear if it has the properties that for all $x, x' \in X$, $y, y' \in Y$ and $r \in  R$, \[ f(x + x', y) = f(x, y) + f(x', y), \] \[ f(x, y+y') = f(x, y) + f(x, y'), \text{ and} \] \[ f(r \cdot x, y) = rf(x, y) = f(x, r \cdot y).\]
+The concept of a bilinear map is important for defining the tensor product of $R$-modules. A bilinear map extends the notion of a linear map to maps of two variables by making the map linear on each variable. Let $X, Y, Z$ be $R$-Modules and $f : X \times Y \to Z$ be a mapping. $f$ is bilinear if it has the properties that for all $x, x' \in X$, $y, y' \in Y$ and $r \in  R$, 
+
+\[ f(x + x', y) = f(x, y) + f(x', y), \]
+
+\[ f(x, y+y') = f(x, y) + f(x, y')\] 
+
+\[ f(r \cdot x, y) = rf(x, y) = f(x, r \cdot y).\]
 
 That is, for fixed $x \in X$, $f_x = f(x, -)$ is a linear map and for fixed $y \in Y$, $f_y = f(-, y)$ is a linear map.
 
