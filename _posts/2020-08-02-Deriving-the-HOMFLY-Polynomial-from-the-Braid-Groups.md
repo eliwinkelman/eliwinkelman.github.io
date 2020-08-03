@@ -47,11 +47,13 @@ Just like a vector space has a basis, modules can also have a basis (although th
 
 The concept of a bilinear map is important for defining the tensor product of $R$-modules. A bilinear map extends the notion of a linear map to maps of two variables by making the map linear on each variable. Let $X, Y, Z$ be $R$-Modules and $f : X \times Y \to Z$ be a mapping. $f$ is bilinear if it has the properties that for all $x, x' \in X$, $y, y' \in Y$ and $r \in  R$, 
 
-\[ f(x + x', y) = f(x, y) + f(x', y), \]
+\[(fX)(p) = f(p)X(p)\]
 
-\[ f(x, y+y') = f(x, y) + f(x, y')\] 
+$$f(x + x', y) = f(x, y) + f(x', y),$$
 
-\[ f(r \cdot x, y) = rf(x, y) = f(x, r \cdot y).\]
+$$f(x, y+y') = f(x, y) + f(x, y')$$
+
+$$f(r \cdot x, y) = rf(x, y) = f(x, r \cdot y)$$
 
 That is, for fixed $x \in X$, $f_x = f(x, -)$ is a linear map and for fixed $y \in Y$, $f_y = f(-, y)$ is a linear map.
 
@@ -65,7 +67,7 @@ M\times N \arrow[rd, "f"'] \arrow[r, "\otimes_R"] & M \otimes_R N \arrow[d, "\ha
 \end{tikzcd}
 \end{equation}
 
-In fact, this property defines a unique space $M \otimes_R N$. If $M$ and $N$ are free $R$-modules of dimension $k$ and $l$ resp. with bases $(m^i)\_{1 \leq i \leq k}$ and $(n^j)\_{1 \leq i \leq l}$, then $M \otimes\_R N$ is a free $R$-module of dimension $kn$ with a basis given by $(m^i \otimes_R n^j)\_{1 \leq i \leq k, 1 \leq i \leq l}$. Free modules and their tensor products are used to construct the HOMFLY polynomial.
+In fact, this property defines a unique space $M \otimes_R N$. If $M$ and $N$ are free $R$-modules of dimension $k$ and $l$ resp. with bases $(m^i)_{1 \leq i \leq k}$ and $(n^j)\_{1 \leq i \leq l}$, then $M \otimes\_R N$ is a free $R$-module of dimension $kn$ with a basis given by $(m^i \otimes_R n^j)\_{1 \leq i \leq k, 1 \leq i \leq l}$. Free modules and their tensor products are used to construct the HOMFLY polynomial.
 
 <div class="example">
 Let $V$ be a real vector space. The dual space $V^*$ of $V$ is defined as the set of all linear functionals from $V$ to $\mathbb{R}$. Under pointwise addition and scalar multiplication, $V^*$ is itself a vector space. Let $v*, w^* \in V^*$.
