@@ -47,8 +47,6 @@ Just like a vector space has a basis, modules can also have a basis (although th
 
 The concept of a bilinear map is important for defining the tensor product of $R$-modules. A bilinear map extends the notion of a linear map to maps of two variables by making the map linear on each variable. Let $X, Y, Z$ be $R$-Modules and $f : X \times Y \to Z$ be a mapping. $f$ is bilinear if it has the properties that for all $x, x' \in X$, $y, y' \in Y$ and $r \in  R$, 
 
-\[(fX)(p) = f(p)X(p)\]
-
 $$f(x + x', y) = f(x, y) + f(x', y),$$
 
 $$f(x, y+y') = f(x, y) + f(x, y')$$
@@ -114,7 +112,7 @@ Suppose $w = \iota(a) t_k T_i b$ for $a \in H_n$, $b \in H_{n+1}$ and $T_i$ any 
 
 <div class="proof">
 	If $| i - k | > 1$, then $T_i$ commutes with $T_k, T_{k+1}... T_n$ and it follows that $w = \iota(a) t_k T_i b = \iota(a) T_i t_k b$.	If $i = k-1$ then $w = \iota(a) t_k T_i b = \iota(a) t_{k-1} b$ by definition of $t_\cdot$. 
-	If $n \geq i \geq k$ then $w = \iota(a)  t_k T_i b = \iota(a) T_n T_{n-1} ... T_i T_{i-1} ... T_{k} T_i b =  \iota(a) T_n T_{n-1} ... T_i T_{i-1} T_i... T_{k} b=  \iota(a) T_n T_{n-1}... T_{i-1} T_i  T_{i-1} ... T_{k} b = \iota(a) T_{i-1} T_n T_{n-1} ... T_{k} b = \iota(a) T_{i-1} t_k b$.
+	If $n \geq i \geq k$ then $w = \iota(a)  t_k T_i b $$= \iota(a) T_n T_{n-1} ... T_i T_{i-1} ... T_{k} T_i b$ $=  \iota(a) T_n T_{n-1} ... T_i T_{i-1} T_i... T_{k} b$$=  \iota(a) T_n T_{n-1}... T_{i-1} T_i  T_{i-1} ... T_{k} b $= \iota(a) T_{i-1} T_n T_{n-1} ... T_{k} b$$= \iota(a) T_{i-1} t_k b$.
 </div>
 
 Let $w$ be a word in $H_{n+1}$ of length $l$ with no adjacent generators (i.e. $T_i T_i$). 
