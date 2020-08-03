@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 ---
 
 Braids have many useful applications to knot theory. Consider taking a geometric braid and identifying the beginning and endings of its strands (in order) to create a closed braid. This closed braid will be a link. In fact, in 1923 James Alexander proved that every link can be represented by a closed braid. This discovery was made even more useful by a result of Markov which relates equivalence of links to equivalence of braids. Two braids are $M$-equivalent if they can be transformed into each other in the braid group and with the additional following two rules (called Markov moves). The first new rule, sometimes called conjugation, is that given $b_1, b_2 \in B_n$, $b_1 \mapsto b_2 b_1 b_2^{-1}$. The second new rule is that for $b_1 \in B_n$, $b_1 \mapsto \sigma_n^{\pm 1}\iota( b_1)$ where $\iota: B_n \to B_{n+1}$ is the inclusion map. These two rules form an equivalence relation $\sim$ on $B = \bigcup_{n \geq 1} B_n$ such that $B/\sim$ is isomorphic to the space of links in $\mathbb{R}^3$. This is discussed in more detail in \cite{TheKnotBook}.
