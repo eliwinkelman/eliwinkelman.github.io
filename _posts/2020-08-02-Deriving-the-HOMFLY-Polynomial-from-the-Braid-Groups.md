@@ -10,7 +10,9 @@ Using the rules for $M$-equivalence, we can define a special type of function wh
 
 <div class="definition">
   A set of maps $\{f_n : B_n \to E\}_{n\geq 1}$ is a <i>Markov function</i> if it has the properties:
+  
 1. For any $n\geq 1$ and $b_1, b_2 \in B_n$, $f_n(b_1 b_2) = f_n(b_2 b_1)$
+  
 2. For any $n\geq 1$ and $b \in B_n$, $f_n(b) = f_{n+1}(\sigma_n b)$ and $f_n(b) = f_{n+1}(\sigma_n^{-1} b)$.
 </div>
 
@@ -43,10 +45,7 @@ The set of infinitely differentiable functions from $\mathbb{R}^3 $ to $\mathbb{
 
 Just like a vector space has a basis, modules can also have a basis (although they may not). Let $M$ be an $R$-module. A set $E \subset M$ is a basis for $M$ if $E$ is a generating set for $M$ and $E$ is linearly independent. A free module is a module with a basis.
 
-The concept of a bilinear map is important for defining the tensor product of $R$-modules. A bilinear map extends the notion of a linear map to maps of two variables by making the map linear on each variable. Let $X, Y, Z$ be $R$-Modules and $f : X \times Y \to Z$ be a mapping. $f$ is bilinear if it has the properties that for all $x, x' \in X$, $y, y' \in Y$ and $r \in  R$,
-\[f(x + x', y) = f(x, y) + f(x', y), \]
-\[f(x, y+y') = f(x, y) + f(x, y'), \text{ and} \]
-\[f(r \cdot x, y) = rf(x, y) = f(x, r \cdot y).\]
+The concept of a bilinear map is important for defining the tensor product of $R$-modules. A bilinear map extends the notion of a linear map to maps of two variables by making the map linear on each variable. Let $X, Y, Z$ be $R$-Modules and $f : X \times Y \to Z$ be a mapping. $f$ is bilinear if it has the properties that for all $x, x' \in X$, $y, y' \in Y$ and $r \in  R$, \[ f(x + x', y) = f(x, y) + f(x', y), \] \[ f(x, y+y') = f(x, y) + f(x, y'), \text{ and} \] \[ f(r \cdot x, y) = rf(x, y) = f(x, r \cdot y).\]
 
 That is, for fixed $x \in X$, $f_x = f(x, -)$ is a linear map and for fixed $y \in Y$, $f_y = f(-, y)$ is a linear map.
 
@@ -60,13 +59,14 @@ M\times N \arrow[rd, "f"'] \arrow[r, "\otimes_R"] & M \otimes_R N \arrow[d, "\ha
 \end{tikzcd}
 \end{equation}
 
-In fact, this property defines a unique space $M \otimes_R N$. If $M$ and $N$ are free $R$-modules of dimension $k$ and $l$ resp. with bases $(m^i)_{1 \leq i \leq k}$ and $(n^j)_{1 \leq i \leq l}$, then $M \otimes_R N$ is a free $R$-module of dimension $kn$ with a basis given by $(m^i \otimes_R n^j)_{1 \leq i \leq k, 1 \leq i \leq l}$. Free modules and their tensor products are used to construct the HOMFLY polynomial.
+In fact, this property defines a unique space $M \otimes_R N$. If $M$ and $N$ are free $R$-modules of dimension $k$ and $l$ resp. with bases $(m^i)\_{1 \leq i \leq k}$ and $(n^j)\_{1 \leq i \leq l}$, then $M \otimes\_R N$ is a free $R$-module of dimension $kn$ with a basis given by $(m^i \otimes_R n^j)\_{1 \leq i \leq k, 1 \leq i \leq l}$. Free modules and their tensor products are used to construct the HOMFLY polynomial.
 
-\begin{example}
+<div class="example">
 Let $V$ be a real vector space. The dual space $V^*$ of $V$ is defined as the set of all linear functionals from $V$ to $\mathbb{R}$. Under pointwise addition and scalar multiplication, $V^*$ is itself a vector space. Let $v*, w^* \in V^*$.
-Consider the map $\psi : V^* \otimes V^* \to (V \times V)^*$ defined by \[\phi(v^* \otimes u^*)(a, b) = v^*(a)u^*(b).\] This map allows us to view $v^* \otimes u^*$ as a bilinear functional on $V \times V$. We can use these tensor products of dual vectors in linear algebra. For example, if $v^* \otimes u^*$ is non-degenerate and positive-semidefinite $v^* \otimes u^*$ defines an inner product on $V$. \end{example}
+Consider the map $\psi : V^* \otimes V^* \to (V \times V)^*$ defined by \[\phi(v^* \otimes u^*)(a, b) = v^*(a)u^*(b).\] This map allows us to view $v^* \otimes u^*$ as a bilinear functional on $V \times V$. We can use these tensor products of dual vectors in linear algebra. For example, if $v^* \otimes u^*$ is non-degenerate and positive-semidefinite $v^* \otimes u^*$ defines an inner product on $V$. 
+</div>
 
-\begin{definition}[Associative R-Algebra]
+<div class="definition">
 Let $A$ be an $R$-Module with a bilinear multiplication map $A \times A \to A$ on $A$ such that 
 	\begin{enumerate}
 	\singlespacing
@@ -76,35 +76,38 @@ Let $A$ be an $R$-Module with a bilinear multiplication map $A \times A \to A$ o
 	\doublespacing
 	\end{enumerate}
 	Then $A$ is an associative $R$-algebra.
-\end{definition}
+</div>
 
-\section{Iwahori Hecke Algebras}
+## The Iwahori Hecke Algebras
 
-\begin{definition}[Iwahori Hecke Algebra] Let $R$ be a fixed commutative ring and $q, z \in R$ be fixed. Then $H_n = H_n^R(q, z)$ is an associative $R$-algebra with multiplicative unity $1$, generators $T_1, T_2, ..., T_{n-1}$ and relations
-	\begin{enumerate}
-		\item $T_i T_j = T_j T_i$ for $|i - j| \geq 2$,
-		\item $T_i T_{i+1} T_i = T_{i+1} T_i T_{i+1}$ for $i = 1, 2, ..., n-2$, and
-		\item $T_i^{-1} = q^{-1}(T_i - z1)$ for $i = 1, 2, ..., n-1$.
-	\end{enumerate}
-\end{definition}
+<div class="definition">
+Let $R$ be a fixed commutative ring and $q, z \in R$ be fixed. Then the Iwahori Hecke Algebra $H_n = H_n^R(q, z)$ is an associative $R$-algebra with multiplicative unity $1$, generators $T_1, T_2, ..., T_{n-1}$ and relations
+
+1. $T_i T_j = T_j T_i$ for $|i - j| \geq 2$,
+  
+2. $T_i T_{i+1} T_i = T_{i+1} T_i T_{i+1}$ for $i = 1, 2, ..., n-2$, and
+
+3. $T_i^{-1} = q^{-1}(T_i - z1)$ for $i = 1, 2, ..., n-1$.
+
+</div>
 
 The first two relations of the Iwahori Hecke algebra are the same as the relations for the braid group, but the third relation is new. Take any product of these generators \[w = \prod_{i_j} T_{i_j} \] where $(i_j)$ is a finite sequence of indices. We will call these "words." All elements in $H_{n+1}$ can be written as a finite sum of words with $i_j = 1, 2, ... n$. Let $\lambda(w)$ be the number of generators in $w$ (i.e. the length of the word).
 
 Let $\iota : H_n \to H_{n+1}$ be a map defined on the generators of $H_n$ by $T_i \mapsto T_i$ for $i = 1, ..., n-1$. Then $\iota(w)h$ for $w \in H_{n-1}$ and $h \in H_n$ defines a multiplication operation which turns $H_n$ into a left $H_{n-1}$-module. Let $T' = \{1, T_n, T_n T_{n-1}, ..., T_n T_{n-1} ... T_2 T_1\}$. We claim that it is possible to write any word $w$ in the form $\iota(\tilde{w}) t'$ where $\tilde{w}$ is a word in $H_{n}$ and $t' \in T'$, or as a sum of words in this form. Let $t_k = T_n T_{n-1} ... T_{k}$.
 
-\begin{lemma}
+<div class="lemma">
 Suppose $w = \iota(a) t_k T_i b$ for $a \in H_n$, $b \in H_{n+1}$ and $T_i$ any generator of $H_{n+1}$. If $w$ has no adjacent generators the following hold:
-\begin{enumerate}
-\item If $k - i > 1$, then $w = \iota(a) T_i t_k b$;
-\item If $i = k-1$, then $w = \iota(a) t_{k-1} b$; and
-\item If $n \geq i \geq k$, $w = \iota(a) T_{i-1} t_k b$.
-\end{enumerate}
-\end{lemma}
 
-\begin{proof}
+1. If $k - i > 1$, then $w = \iota(a) T_i t_k b$;
+2. If $i = k-1$, then $w = \iota(a) t_{k-1} b$; and
+3. If $n \geq i \geq k$, $w = \iota(a) T_{i-1} t_k b$.
+
+</div>
+
+<div class="proof">
 	If $| i - k | > 1$, then $T_i$ commutes with $T_k, T_{k+1}... T_n$ and it follows that $w = \iota(a) t_k T_i b = \iota(a) T_i t_k b$.	If $i = k-1$ then $w = \iota(a) t_k T_i b = \iota(a) t_{k-1} b$ by definition of $t_\cdot$. 
 	If $n \geq i \geq k$ then $w = \iota(a)  t_k T_i b = \iota(a) T_n T_{n-1} ... T_i T_{i-1} ... T_{k} T_i b =  \iota(a) T_n T_{n-1} ... T_i T_{i-1} T_i... T_{k} b=  \iota(a) T_n T_{n-1}... T_{i-1} T_i  T_{i-1} ... T_{k} b = \iota(a) T_{i-1} T_n T_{n-1} ... T_{k} b = \iota(a) T_{i-1} t_k b$.
-\end{proof}
+</div>
 
 Let $w$ be a word in $H_{n+1}$ of length $l$ with no adjacent generators (i.e. $T_i T_i$). 
 If $w \not \in H_{n}$ then $w = \iota(a) T_n b_0$ for $a \in H_{n}$ and $b_0 = T_{i_j} b_{1} \in H_{n+1}$. 
