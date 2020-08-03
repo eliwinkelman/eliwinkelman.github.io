@@ -129,12 +129,12 @@ The third relation of the Iwahori Hecke Algebras says that any $T_i^m = c_1(m) T
 See the above discussion and algorithm or the proof of Proposition 4.21 in \cite{BraidGroups}.
 </div>
 
-\begin{theorem}
+<div class="theorem">
 \label{theorem:H_n_isomorphism}
 There is a $H_n$-module isomorphism \[\phi_n: H_n \oplus (H_n \otimes_{H_{n-1}} H_n) \to H_{n+1}\] defined by 
 \[(x + \sum_i y_i \otimes z_i) \mapsto \iota(x) + \sum_i y_i T_n z_i\] for any $x \in H_n$, $\sum_i y_i \otimes z_i \in H_n \otimes_{H_{n-1}} H_n$.
-\end{theorem}
-\begin{proof}
+</div>
+<div class="proof">
 We use equation \ref{equation:universal_property} to show that this mapping is a well defined homomorphism on elements in $H_n \otimes_{H_{n-1}} H_n$. 
 Let $f : H_n \times H_n \to H_{n+1}$ be defined by $(a, b) \mapsto aT_nb$. 
 Since $T_i T_j = T_j T_i$ for $|i - j| \geq 2$, for any $h \in H_{n-1}$ and $a, b, c\in H_n$, \[f(ah, b) = ahT_nb = aT_n h b = f(a, hb),\] \[f(a+c, b) = (a+c)T_n b = aT_nb + cT_nb = f(a,b)+f(c, b), \text{ and}\] \[f(a, b+c) = aT_n(b+c) = aT_nb + aT_nc = f(a,b)+f(a,c).\]
@@ -146,7 +146,7 @@ As a $H_{n-1}$-module $H_n \oplus (H_n \otimes_{H_{n-1}} H_n)$ has a basis given
 \[\{T_{n-1}, T_{n-1}T_{n-2},...\} \coprod \{1 \otimes 1, T_{n-1} \otimes 1, T_{n-1} T_{n-2} \otimes 1, ... T_{n-1} \otimes T_{n-1}, ..., T_{n-1}T_{n-2}...T_2 T_1 \otimes T_{n-1}T_{n-2}...T_2 T_1 \}.\]
 If instead we look at $H_n \oplus (H_n \otimes_{H_{n-1}} H_n)$ as an $H_n$ module, this basis reduces to \[\{1\} \coprod \{ 1 \otimes 1, 1 \otimes T_{n-1}, 1 \otimes T_{n-1}T_{n-2}, ... 1 \otimes T_{n-1}T_{n-2}...T_2 T_1\}.\]
 $\phi_n$ sends this basis to $\{1, T_n, T_n T_{n-1}, ...T_n T_{n-1}...T_2 T_1\}$ which by Theorem \ref{theorem:H_n_free_module} is the basis for $H_{n+1}$ as an $H_n$ module. Therefore $\phi_n$ is a $H_n$-module isomorphism.
-\end{proof}
+</div>
 
 \begin{remark}
 Theorem \ref{theorem:H_n_isomorphism} also implies that $\phi$ is an R-module since every $r \in R$ is in $H_n$. Therefore $\phi$ is an $R$-module homomorphism and still bijective.
