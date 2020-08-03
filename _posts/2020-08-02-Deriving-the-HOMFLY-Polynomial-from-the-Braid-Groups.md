@@ -121,13 +121,13 @@ Suppose that  $w = \iota(a) t_k b_j$ for some $k = 1, 2, ... n$, $a \in H_{n}$ a
 
 The third relation of the Iwahori Hecke Algebras says that any $T_i^m = c_1(m) T_i + c_2(m)$ where $c_1(m)$ and $c_2(m)$ are in $R$ and depend on $m$. Therefore we can expand any word $w \in H_{n+1}$ into a sum of words with no adjacent generators and then the algorithm gives a sum of words in the form $\iota(\tilde{w}) t_k$ where $t_k \in T'$ and $w \in H_n$. Since $T'$ is linearly independent, we obtain the following consequence.
 
-\begin{theorem}
+<div class="theorem">
 \label{theorem:H_n_free_module}
 	$H_n$ is a free $H_{n-1}$-module with a basis $\{1, T_{n-1}, T_{n-1}T_{n-2} ..., T_{n-1}T_{n-2} ... T_2 T_1\}$ and $\iota: H_{n-1} \to H_n$ is an injective homomorphism.
-\end{theorem}
-\begin{proof}
+</div>
+<div class="proof">
 See the above discussion and algorithm or the proof of Proposition 4.21 in \cite{BraidGroups}.
-\end{proof}
+</div>
 
 \begin{theorem}
 \label{theorem:H_n_isomorphism}
