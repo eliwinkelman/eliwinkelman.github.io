@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Projects
-permalink:/projectspage/
 ---
 
 ## 2019
@@ -9,7 +8,7 @@ permalink:/projectspage/
 <div class="project-preview">
     <img class="project-image" src="/images/WeakTypes1.png" />
   <div class="project-info">
-    <a class="project-title" href="/projects/weak-types">
+    <a class="project-title" href="/projects/Weak-Types">
     	<h4>
         Weak Types
       </h4>
@@ -22,7 +21,7 @@ permalink:/projectspage/
 <div class="project-preview">
   <img class="project-image" src="/images/SudokuSolver.png" />
   <div class="project-info">
-    <a class="project-title" href="/projects/sudoku-solver">
+    <a class="project-title" href="/projects/Sudoku-Solver">
     	<h4>
         Sudoku Solver
       </h4>
@@ -36,7 +35,7 @@ permalink:/projectspage/
 <div class="project-preview">
   <img class="project-image" src="/images/Spool.png" />
   <div class="project-info">
-    <a class="project-title" href="/projects/spool">
+    <a class="project-title" href="/projects/Spool">
     	<h4>
         Spool
       </h4>
@@ -50,7 +49,7 @@ permalink:/projectspage/
 <div class="project-preview">
   <img class="project-image" src="/images/melaknow_diamond.png" />
   <div class="project-info">
-    <a class="project-title" href="/projects/melaknow">
+    <a class="project-title" href="/projects/Melaknow">
     	<h4>
         Melaknow
       </h4>
