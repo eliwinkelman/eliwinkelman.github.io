@@ -1,4 +1,6 @@
 ---
+title: Path Connectedness of Hyperspheres
+layout: post
 published: true
 ---
 

@@ -37,6 +37,7 @@ h1, h2, h3, h4, h5, h6 {
 
   line-height: 1.7;
   margin: 1em 0 15px;
+  margin-bottom: 0;
   padding: 0;
 
   @include mobile {
@@ -150,13 +151,12 @@ img {
 // .masthead
 //
 
-.wrapper-masthead {
-  margin-bottom: 50px;
+#main {
+  margin-bottom: 150px;
 }
 
 .masthead {
   padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
 
   @include mobile {
     text-align: center;
@@ -287,6 +287,44 @@ footer {
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
 @import "svg-icons";
+
+
+// project styling
+
+.project-preview {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.project-image {
+  display: inline-block;
+  float: left;
+  height: 70px;
+  width: 70px;
+}
+
+.project-info {
+  margin-top: -30px;
+  margin-left: 10px;
+}
+
+.center {
+  text-align: center;
+}
+
+.demo-gif {
+  max-height: 400px;
+}
+
+.headshot {
+  max-height: 300px;
+}
+
+.headshot-wrapper {
+  text-align: center;
+}
 
 // math styling
 

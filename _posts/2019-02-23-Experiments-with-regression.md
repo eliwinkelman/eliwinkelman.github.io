@@ -1,12 +1,8 @@
 ---
+layout: post
+title: Experiments with emulating a sin curve.
 published: false
 ---
----
-format: post
-title: Experiments with emulating a sin curve.
-published: true
----
-
 This is a set of of neural network experiments with generating a sin curve through a 1) single layer neural network 2) deep neural network 3) generative adversarial network.
 
 

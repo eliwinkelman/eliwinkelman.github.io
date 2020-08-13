@@ -1,5 +1,7 @@
 ---
+title: Arduino DIY Dynamic Casting
 published: true
+layout: post
 ---
 Arduino doesn't have dynamic cast because Real Time Type Info (RTTI) is disabled by the compiler to save memory.
 

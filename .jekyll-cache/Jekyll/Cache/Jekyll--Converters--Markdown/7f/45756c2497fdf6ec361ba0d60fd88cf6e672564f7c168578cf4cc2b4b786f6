@@ -1,0 +1,130 @@
+I"*<p>Arduino doesn’t have dynamic cast because Real Time Type Info (RTTI) is disabled by the compiler to save memory.</p>
+
+<p>You can theoretically reenable it if you mess with the compiler settings, but this isn’t an option if you are writing code that needs to be easily buildable by people who don’t want to touch their arduino compiler settings.</p>
+
+<p>Another way is to write your own dynamic casting functionality using prime number factorization to track polymorphism inheritance. Enter DIY Dynamic Cast.</p>
+
+<p>Note: this should not be used, it’s just a fun trick. If you think you need dynamic cast, there’s usual a design pattern that will let you avoid it and make your code cleaner in the process.</p>
+
+<h3 id="idea">Idea</h3>
+
+<p>The basic idea is that for each class that needs dynamic casting, we will assign it an integer id. This id will be the product of its parent’s id and the next prime number.</p>
+
+<p>For example, say we had a Dog class and a subclass of Dog called Lab. Our Dog class would get the first prime number assigned to it as an id (multiplied by 1 because Dog has no parents). Lab would have an id of 3*2 = 6 (the next prime is 3).</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Dog</span> <span class="p">{</span>
+	<span class="k">static</span> <span class="kt">int</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="p">}</span>
+    
+<span class="k">class</span> <span class="nc">Lab</span> <span class="p">{</span>
+ 	<span class="k">static</span> <span class="kt">int</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">nextPrime</span><span class="p">()</span> <span class="c1">// nextPrime() -&gt; 3</span>
+<span class="p">}</span>
+    
+</code></pre></div></div>
+
+<p>If we need to check if an instance of Dog is actually an upcasted instance of Lab, we can just check if the id of the dog instance is divisible by the id of the Lab class.</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="n">dog</span><span class="p">.</span><span class="n">id</span> <span class="o">%</span> <span class="n">Lab</span><span class="o">::</span><span class="n">id</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>We could also check upcasts the same way. Because each class has a unique prime multiplied into it’s id tree the id of the object instance O is <strong>only</strong> divisible by the id of a class C if O is an instance of C or inherits from C.</p>
+
+<h3 id="implementation">Implementation</h3>
+
+<p>This isn’t useful unless we can find a way to automatically assign ids to the classes that need them.</p>
+
+<p>We need a function to get the next prime number that has never been used: getNextPrime().</p>
+
+<p>Then we need a function that calculates the type_id from the parent id and the prime.</p>
+
+<p>getChildTypeId(int parentId)</p>
+
+<p>Finally, we need a DynamicClass parent class that will define the implementation of a <code class="language-plaintext highlighter-rouge">static const int id</code> for the class.</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">DynamicClass</span> <span class="p">{</span>
+	<span class="k">static</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>And then for convenience, some macros that does the neccessary work to generate a dynamic child class.</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="cp">#define DYNAMIC_CLASS public DynamicClass {  \
+public: \
+    static const int id; \
+private:
+</span>
+<span class="cp">#define END_DYNAMIC_CLASS(classname, parent)\
+};\
+\
+const int classname::id(getChildTypeId(parent::id));
+</span>
+</code></pre></div></div>
+
+<p>The first macro helps ensure that our type has an id and the second calculates the id. This calculation needs to be done outside of the class.</p>
+
+<p>Now we can create a dynamic cast template function to cast something if it is in the inheritance tree and return a nullptr or error otherwise.</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="nc">T</span><span class="p">,</span> <span class="k">class</span> <span class="nc">V</span><span class="p">&gt;</span>
+<span class="n">T</span><span class="o">*</span> <span class="nf">Dynamic_Cast</span><span class="p">(</span><span class="n">V</span><span class="o">*</span> <span class="n">obj</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// check if the object is in the inheritance prime tree</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">obj</span> <span class="o">-&gt;</span> <span class="n">id</span> <span class="o">%</span> <span class="n">T</span><span class="o">::</span><span class="n">id</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//cast object</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">T</span><span class="o">*</span><span class="p">)</span><span class="n">obj</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="c1">//otherwise return a null pointer</span>
+    <span class="k">return</span> <span class="nb">nullptr</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<p>Trying it out:</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">class</span> <span class="nc">myDynamicClass</span> <span class="o">:</span> <span class="n">DYNAMIC_CLASS</span>
+	<span class="kt">int</span> <span class="n">myInt</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">mySecondInt</span><span class="p">;</span>
+    <span class="kt">void</span> <span class="nf">myFunc</span><span class="p">(</span><span class="kt">int</span> <span class="n">arg1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">arg2</span><span class="p">){</span> 
+        <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">arg1</span><span class="p">);</span>
+        <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">arg2</span><span class="p">);</span> 
+    <span class="p">};</span>
+
+    <span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="nc">T</span><span class="p">,</span> <span class="k">typename</span> <span class="nc">V</span><span class="p">&gt;</span>
+    <span class="kt">void</span> <span class="nf">Foo</span><span class="p">(</span><span class="n">T</span> <span class="n">i</span><span class="p">,</span> <span class="n">V</span> <span class="n">b</span><span class="p">)</span> <span class="p">{};</span>
+<span class="n">END_DYNAMIC_CLASS</span><span class="p">(</span><span class="n">myDynamicClass</span><span class="p">,</span> <span class="n">DynamicClass</span><span class="p">)</span>
+
+  
+   
+<span class="k">class</span> <span class="nc">myChildDynamicClass</span> <span class="o">:</span> <span class="k">public</span> <span class="n">myDynamicClass</span><span class="p">,</span> <span class="n">DYNAMIC_CLASS</span>
+<span class="k">public</span><span class="o">:</span>
+	<span class="kt">int</span> <span class="n">myThirdInt</span><span class="p">;</span>
+<span class="n">END_DYNAMIC_CLASS</span><span class="p">(</span><span class="n">myChildDynamicClass</span><span class="p">,</span> <span class="n">myDynamicClass</span><span class="p">)</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  
+	<span class="n">myDynamicClass</span><span class="o">*</span> <span class="n">hiddenChild</span> <span class="o">=</span> <span class="k">new</span> <span class="n">myChildDynamicClass</span><span class="p">()</span>
+      
+    <span class="n">myDynamicClass</span><span class="o">*</span> <span class="n">parent</span> <span class="o">=</span> <span class="k">new</span> <span class="n">myDynamicClass</span><span class="p">()</span>
+      
+    <span class="n">myDynamicChildClass</span><span class="o">*</span> <span class="n">child</span> <span class="o">=</span> <span class="n">Dynamic_Cast</span><span class="o">&lt;</span><span class="n">myDynamicChildClass</span><span class="o">&gt;</span><span class="p">(</span><span class="n">hiddenChild</span><span class="p">);</span>
+  
+  	<span class="n">myDynamicChildClass</span><span class="o">*</span> <span class="n">badCast</span> <span class="o">=</span> <span class="n">Dynamic_Cast</span><span class="o">&lt;</span><span class="n">myDynamicChildClass</span><span class="o">&gt;</span><span class="p">(</span><span class="n">parent</span><span class="p">);</span>
+  
+  	<span class="k">if</span> <span class="p">(</span><span class="n">badCast</span> <span class="o">!=</span> <span class="nb">nullptr</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+  
+  	<span class="k">if</span> <span class="p">(</span><span class="n">child</span> <span class="o">!=</span> <span class="nb">nullptr</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="p">}</span>
+  	
+  	<span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>This will successfully cast only in the second case, since <code class="language-plaintext highlighter-rouge">badCast.id = 3</code> is not divisible by 		<code class="language-plaintext highlighter-rouge">myChildDynamicClass::id = 15</code>.</p>
+:ET

@@ -1,0 +1,15 @@
+I"K<p>Spool is an open source data logging and device management platform for <a href="https://github.com/OPEnSLab-OSU/Loom">Loom</a>. This work was done while I was at OPEnS Lab.</p>
+
+<p><a href="https://github.com/OPEnSLab-OSU/Spool">Github</a></p>
+
+<p><a href="https://github.com/OPEnSLab-OSU/Spool/wiki">Wiki</a></p>
+
+<h2 id="features">Features</h2>
+
+<ul>
+  <li>Secure device data logging using mutual TLS authentication.</li>
+  <li>A production ready configuration using docker.</li>
+  <li>Device side interface to connect and log data.</li>
+  <li>Basic data visualization.</li>
+</ul>
+:ET

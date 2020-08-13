@@ -1,0 +1,11 @@
+I"b<p>This sudoku solver implements Donald Knuth’s dancing links algorithm to solve sudoku puzzles quickly. Dancing links is an algorithm for solving <a href="https://en.wikipedia.org/wiki/Exact_cover">exact cover problems</a>, which include Sudoku and the N queens problem.</p>
+
+<p>The implementation averaged about 1.5 ms on 15 high difficulty (human rated) sudoku puzzles I found online.</p>
+
+<p><a href="https://github.com/eliwinkelman/Dancing-Links">Github</a></p>
+
+<h2 id="references">References</h2>
+
+<p>Knuth, D. E. (2000). Dancing links. <em>ArXiv:Cs/0011047</em>. http://arxiv.org/abs/cs/0011047</p>
+
+:ET

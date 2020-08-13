@@ -1,0 +1,41 @@
+I"l
+<p>One in five people will develop skin cancer in their lifetime. Ten thousand people die of melanoma, the deadliest skin cancer, each year. The biggest factor in survival is early detection.</p>
+
+<p>Because of a dermatogist shortage, it can take up to 6 months to get screened in many places. Primary care doctors don’t have the training or the experience to accurately assess moles; in fact, a large study found that they rated nearly half of all melanoma they saw as benign. This leaves patients unable to get reliable answers from their primary care doctor and wondering for months if they have cancer while they wait for their dermatologist appointment.</p>
+
+<p>Melaknow is a skin cancer screening tool for primary care physicians built into a smartphone app. Melaknow uses machine learning to help primary care doctors decide whether or not to send a patient to the dermatologist. Melaknow can cut patient wait time by 75% and save them over $60 by avoiding unnecessary visits to the dermatologist.</p>
+
+<div class="center">
+  <img class="demo-gif" src="/images/melaknow_demo_full_looping.gif" />
+  <br />
+  <i>A Demo of the Melaknow app.</i>
+</div>
+
+<h2 id="deliverable-outcomes">Deliverable Outcomes</h2>
+
+<ul>
+  <li>Demonstrable problem/solution fit through over 300 customer interviews with patients, doctors, and dermatologists</li>
+  <li>A ~89% accurate machine learning model</li>
+  <li>Computer vision implementation of the ABCD features doctors already look for</li>
+  <li>A beta-ready iOS app for doctors</li>
+  <li>A provisional patent</li>
+</ul>
+
+<h2 id="grants-and-competitions">Grants and Competitions</h2>
+
+<ul>
+  <li><a href="https://venturewell.org/e-team-grant-program/">VentureWell e-Teams</a> participant</li>
+  <li>TiE Youth Entrepreneurs 2018 Global Pitch Competition first place award. A video of the pitch can be found <a href="https://www.youtube.com/watch?v=-tKVpz29IkI">here</a>.</li>
+  <li>TiE Pitch Oregon 2018 Winner</li>
+  <li>TiE Oregon Youth Entrepreneurs Innovation Grant recipient</li>
+</ul>
+
+<h2 id="press">Press</h2>
+
+<ul>
+  <li><a href="https://www.bizjournals.com/portland/news/2018/12/19/consumer-products-and-health-tech-win-pitch-oregon.html">Consumer products and health tech win Pitch Oregon 2018</a></li>
+  <li><a href="https://www.indiawest.com/news/global_indian/tie-oregon-atlanta-among-winners-of-the-young-entrepreneurs-global-competition/article_bfe46068-7f0b-11e8-bb60-4f80dbdb5249.html">TiE Oregon, Atlanta Among Winners of The Young Entrepreneurs Global Competition</a></li>
+  <li><a href="https://pamplinmedia.com/scc/103-news/385914-272744-melaknow-ing-your-risk-">MelaKnow-ing your risk</a></li>
+</ul>
+
+:ET

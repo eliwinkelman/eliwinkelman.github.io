@@ -1,0 +1,2 @@
+I"<p>Arduino doesn’t have dynamic cast because Real Time Type Info (RTTI) is disabled by the compiler to save memory.</p>
+:ET
