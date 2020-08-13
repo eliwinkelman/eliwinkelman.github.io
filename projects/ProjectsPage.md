@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Projects
+permalink:/projectspage/
 ---
 
 ## 2019
