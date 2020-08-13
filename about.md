@@ -8,7 +8,7 @@ published: true
 
 
  <div class="headshot-wrapper">
-   <img class="headshot" src="/images/headshot.jpg" />
+   <img class="headshot" src="/images/headshot.JPG" />
  </div>
 
 
